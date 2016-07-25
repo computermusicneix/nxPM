@@ -1,0 +1,111 @@
+#N canvas 751 283 179 274 10;
+#X msg 25 69 \; pd dsp 1;
+#X obj 25 37 loadbang;
+#N canvas 946 55 356 521 gem 1;
+#X obj 140 297 gemwin;
+#X obj 140 188 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 59 289 0 \, destroy;
+#N canvas 788 200 450 300 esc 0;
+#X obj 65 20 gemkeyboard;
+#X obj 65 167 outlet;
+#X obj 89 71 keyname;
+#X obj 128 96 sel Escape;
+#X obj 65 41 sel 53;
+#X obj 189 47 sel Escape;
+#X obj 150 22 gemkeyname;
+#X connect 0 0 4 0;
+#X connect 2 1 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;
+#X connect 6 1 5 0;
+#X restore 59 257 pd esc;
+#X obj 216 240 r nxGem;
+#X obj 140 150 loadbang;
+#N canvas 711 69 495 424 nfull 0;
+#X msg 295 105 color 1 1 1;
+#X msg 296 184 border 1;
+#X msg 101 98 0 \, destroy;
+#X obj 157 41 inlet;
+#X obj 265 71 delay 2;
+#X msg 282 264 topmost 0;
+#X msg 193 163 create \, 1;
+#X obj 193 135 delay 4;
+#X obj 225 351 outlet;
+#X msg 296 141 cursor 0;
+#X msg 276 294 title neix;
+#X msg 292 227 dimen 1440 450;
+#X connect 0 0 8 0;
+#X connect 1 0 8 0;
+#X connect 2 0 8 0;
+#X connect 3 0 2 0;
+#X connect 3 0 4 0;
+#X connect 3 0 7 0;
+#X connect 4 0 0 0;
+#X connect 4 0 9 0;
+#X connect 4 0 1 0;
+#X connect 4 0 11 0;
+#X connect 4 0 5 0;
+#X connect 4 0 10 0;
+#X connect 5 0 8 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
+#X connect 11 0 8 0;
+#X restore 140 227 pd nfull;
+#X connect 1 0 6 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 5 0 1 0;
+#X connect 6 0 0 0;
+#X restore 23 118 pd gem;
+#N canvas 0 389 1438 450 mixer 1;
+#N canvas 128 53 577 580 control 1;
+#X obj 161 305 tgl 30 0 c1b1s c1b1r empty 17 7 0 10 -225271 -1 -262144
+0 1;
+#X obj 195 305 tgl 30 0 c1b2s c1b2r empty 17 7 0 10 -225271 -1 -262144
+0 1;
+#X obj 228 305 tgl 30 0 c1b3s c1b3r empty 17 7 0 10 -225271 -1 -262144
+0 1;
+#X obj 262 305 tgl 30 0 c1b4s c1b4r empty 17 7 0 10 -225271 -1 -262144
+0 1;
+#X obj 161 340 tgl 30 0 c1b5s c1b5r empty 17 7 0 10 -258699 -1 -262144
+0 35;
+#X obj 195 340 tgl 30 0 c1b6s c1b6r empty 17 7 0 10 -258699 -1 -262144
+1 1;
+#X obj 228 340 tgl 30 0 c1b7s c1b7r empty 17 7 0 10 -258699 -1 -262144
+1 1;
+#X obj 262 340 tgl 30 0 c1b8s c1b8r empty 17 7 0 10 -258699 -1 -262144
+1 1;
+#X obj 161 376 tgl 30 0 c1b9s c1b9r empty 17 7 0 10 -258699 -1 -262144
+1 1;
+#X obj 195 376 tgl 30 0 c1b10s c1b10r empty 17 7 0 10 -258699 -1 -262144
+1 1;
+#X obj 228 376 tgl 30 0 c1b11s c1b11r empty 17 7 0 10 -258699 -1 -262144
+0 1;
+#X obj 262 376 tgl 30 0 c1b12s c1b12r empty 17 7 0 10 -258699 -1 -262144
+0 1;
+#X obj 161 411 tgl 30 0 c1b13s c1b13r empty 17 7 0 10 -258699 -1 -262144
+0 1;
+#X obj 195 411 tgl 30 0 c1b14s c1b14r empty 17 7 0 10 -258699 -1 -262144
+0 1;
+#X obj 228 411 tgl 30 0 c1b15s c1b15r empty 17 7 0 10 -258699 -1 -262144
+0 1;
+#X obj 262 411 tgl 30 0 c1b16s c1b16r empty 17 7 0 10 -258699 -1 -262144
+0 1;
+#X obj 161 163 vsl 30 128 0 127 0 0 c1c1s c1c1r empty 0 -9 0 10 -258699
+-1 -262144 9900 1;
+#X obj 195 163 vsl 30 128 0 127 0 0 c1c2s c1c2r empty 0 -9 0 10 -258699
+-1 -262144 6000 1;
+#X obj 229 163 vsl 30 128 0 127 0 0 c1c3s c1c3r empty 0 -9 0 10 -258699
+-1 -262144 6900 1;
+#X obj 263 163 vsl 30 128 0 127 0 0 c1c4s c1c4r empty 0 -9 0 10 -258699
+-1 -262144 3300 1;
+#X floatatom 161 133 5 0 0 1 algorithm - -, f 5;
+#X coords 0 -1 1 1 254 386 1 100 100;
+#X restore 54 111 pd control;
+#X restore 68 179 pd mixer;
+#X connect 1 0 0 0;

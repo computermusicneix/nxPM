@@ -1,0 +1,5 @@
+#!/bin/bash
+
+jackd -dalsa -dhw:1 -r44100 -p1024 -n2 & 
+sleep 2 
+pd-l2ork -jack -open $HOME/neix/puredata/nxInit.pd -path $HOME/neix/puredata 
